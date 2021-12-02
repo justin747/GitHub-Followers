@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		3B642378275746820078F017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B642377275746820078F017 /* AppDelegate.swift */; };
 		3B64237A275746820078F017 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B642379275746820078F017 /* SceneDelegate.swift */; };
-		3B64237C275746820078F017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64237B275746820078F017 /* ViewController.swift */; };
 		3B642381275746860078F017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B642380275746860078F017 /* Assets.xcassets */; };
 		3B642384275746860078F017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B642382275746860078F017 /* LaunchScreen.storyboard */; };
+		3B64238C275882F90078F017 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64238B275882F90078F017 /* SearchVC.swift */; };
+		3B64238E275883820078F017 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64238D275883820078F017 /* FavoritesListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B642374275746820078F017 /* GitHub Followers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Followers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B642377275746820078F017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B642379275746820078F017 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B64237B275746820078F017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B642380275746860078F017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B642383275746860078F017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B642385275746860078F017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B64238B275882F90078F017 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		3B64238D275883820078F017 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 			children = (
 				3B642377275746820078F017 /* AppDelegate.swift */,
 				3B642379275746820078F017 /* SceneDelegate.swift */,
-				3B64237B275746820078F017 /* ViewController.swift */,
+				3B64238B275882F90078F017 /* SearchVC.swift */,
 				3B642380275746860078F017 /* Assets.xcassets */,
 				3B642382275746860078F017 /* LaunchScreen.storyboard */,
 				3B642385275746860078F017 /* Info.plist */,
+				3B64238D275883820078F017 /* FavoritesListVC.swift */,
 			);
 			path = "GitHub Followers";
 			sourceTree = "<group>";
@@ -134,7 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B64237C275746820078F017 /* ViewController.swift in Sources */,
+				3B64238E275883820078F017 /* FavoritesListVC.swift in Sources */,
+				3B64238C275882F90078F017 /* SearchVC.swift in Sources */,
 				3B642378275746820078F017 /* AppDelegate.swift in Sources */,
 				3B64237A275746820078F017 /* SceneDelegate.swift in Sources */,
 			);
