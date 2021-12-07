@@ -71,19 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				3B642377275746820078F017 /* AppDelegate.swift */,
-				3B642379275746820078F017 /* SceneDelegate.swift */,
+				3B642380275746860078F017 /* Assets.xcassets */,
+				3B64238D275883820078F017 /* FavoritesListVC.swift */,
+				3B764D05275C8A4F00E92FFC /* FollowerListVC.swift */,
+				3B0198B2275F080F00C985BF /* GFAlertVC.swift */,
+				3B0198B0275F045000C985BF /* GFBodyLabel.swift */,
 				3B64238F2759EBAC0078F017 /* GFButton.swift */,
 				3B6423912759F8230078F017 /* GFTextField.swift */,
-				3B64238B275882F90078F017 /* SearchVC.swift */,
 				3B0198AE275DAA2A00C985BF /* GFTitleLabel.swift */,
-				3B0198B0275F045000C985BF /* GFBodyLabel.swift */,
-				3B0198B2275F080F00C985BF /* GFAlertVC.swift */,
-				3B0198B4275F22AB00C985BF /* UIViewController+Ext.swift */,
-				3B764D05275C8A4F00E92FFC /* FollowerListVC.swift */,
-				3B642380275746860078F017 /* Assets.xcassets */,
-				3B642382275746860078F017 /* LaunchScreen.storyboard */,
 				3B642385275746860078F017 /* Info.plist */,
-				3B64238D275883820078F017 /* FavoritesListVC.swift */,
+				3B642382275746860078F017 /* LaunchScreen.storyboard */,
+				3B642379275746820078F017 /* SceneDelegate.swift */,
+				3B64238B275882F90078F017 /* SearchVC.swift */,
+				3B0198B4275F22AB00C985BF /* UIViewController+Ext.swift */,
 			);
 			path = "GitHub Followers";
 			sourceTree = "<group>";
@@ -317,6 +317,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +346,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
