@@ -74,6 +74,7 @@
 		3B642376275746820078F017 /* GitHub Followers */ = {
 			isa = PBXGroup;
 			children = (
+				3B642385275746860078F017 /* Info.plist */,
 				3BCEE1322761C68F007095D7 /* Screens */,
 				3BCEE1312761C688007095D7 /* Views */,
 				3BCEE1302761C67F007095D7 /* Extensions */,
@@ -97,7 +98,6 @@
 			children = (
 				3B642377275746820078F017 /* AppDelegate.swift */,
 				3B642380275746860078F017 /* Assets.xcassets */,
-				3B642385275746860078F017 /* Info.plist */,
 				3B642382275746860078F017 /* LaunchScreen.storyboard */,
 				3B642379275746820078F017 /* SceneDelegate.swift */,
 			);
