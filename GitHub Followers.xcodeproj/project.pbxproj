@@ -20,6 +20,7 @@
 		3B6423902759EBAC0078F017 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64238F2759EBAC0078F017 /* GFButton.swift */; };
 		3B6423922759F8230078F017 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6423912759F8230078F017 /* GFTextField.swift */; };
 		3B764D06275C8A4F00E92FFC /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B764D05275C8A4F00E92FFC /* FollowerListVC.swift */; };
+		3BC87AED2763026500FEB977 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC87AEC2763026500FEB977 /* NetworkManager.swift */; };
 		3BCEE1342761C6A3007095D7 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCEE1332761C6A3007095D7 /* Follower.swift */; };
 		3BCEE1362761C6B3007095D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCEE1352761C6B3007095D7 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		3B64238F2759EBAC0078F017 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		3B6423912759F8230078F017 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		3B764D05275C8A4F00E92FFC /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
+		3BC87AEC2763026500FEB977 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3BCEE1332761C6A3007095D7 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		3BCEE1352761C6B3007095D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		3B642376275746820078F017 /* GitHub Followers */ = {
 			isa = PBXGroup;
 			children = (
+				3BC87AEB2763023E00FEB977 /* Managers */,
 				3B642385275746860078F017 /* Info.plist */,
 				3BCEE1322761C68F007095D7 /* Screens */,
 				3BCEE1312761C688007095D7 /* Views */,
@@ -82,6 +85,14 @@
 				3BCEE12E2761C66F007095D7 /* Model */,
 			);
 			path = "GitHub Followers";
+			sourceTree = "<group>";
+		};
+		3BC87AEB2763023E00FEB977 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3BC87AEC2763026500FEB977 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		3BCEE12E2761C66F007095D7 /* Model */ = {
@@ -214,6 +225,7 @@
 				3B0198B1275F045000C985BF /* GFBodyLabel.swift in Sources */,
 				3BCEE1342761C6A3007095D7 /* Follower.swift in Sources */,
 				3B0198AF275DAA2A00C985BF /* GFTitleLabel.swift in Sources */,
+				3BC87AED2763026500FEB977 /* NetworkManager.swift in Sources */,
 				3B764D06275C8A4F00E92FFC /* FollowerListVC.swift in Sources */,
 				3B642378275746820078F017 /* AppDelegate.swift in Sources */,
 				3B64237A275746820078F017 /* SceneDelegate.swift in Sources */,
