@@ -8,7 +8,7 @@
 import UIKit
 
 class GFButton: UIButton {
- 
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -27,16 +27,16 @@ class GFButton: UIButton {
     
     private func configure() {
         layer.cornerRadius = 10
-        titleLabel?.textColor = .white
+        setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+/*
+ // Only override draw() if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ override func draw(_ rect: CGRect) {
+ // Drawing code
+ }
+ */
