@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum ErrorMessage: String {
+enum GFError: String, Error {
     
-    case invalidSuername = "This username created invalid request. Please try again"
+    case invalidUsername = "This username created invalid request. Please try again"
     case unableToComplete = "Unable to complete request. Please check your network connection"
     case invalidResponse = "Invalid response from the server. Please try again."
     case invalidData = "The data received from the server is invalid. Please try again"
