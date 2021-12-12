@@ -21,6 +21,8 @@
 		3B6423922759F8230078F017 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6423912759F8230078F017 /* GFTextField.swift */; };
 		3B764D06275C8A4F00E92FFC /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B764D05275C8A4F00E92FFC /* FollowerListVC.swift */; };
 		3B8A0F7F276461A200AB7070 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A0F7E276461A200AB7070 /* ErrorMessage.swift */; };
+		3B8A0F8227659EC400AB7070 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A0F8127659EC400AB7070 /* FollowerCell.swift */; };
+		3B8A0F842765A80F00AB7070 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A0F832765A80F00AB7070 /* GFAvatarImageView.swift */; };
 		3BC87AED2763026500FEB977 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC87AEC2763026500FEB977 /* NetworkManager.swift */; };
 		3BCEE1342761C6A3007095D7 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCEE1332761C6A3007095D7 /* Follower.swift */; };
 		3BCEE1362761C6B3007095D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCEE1352761C6B3007095D7 /* User.swift */; };
@@ -43,6 +45,8 @@
 		3B6423912759F8230078F017 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		3B764D05275C8A4F00E92FFC /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		3B8A0F7E276461A200AB7070 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		3B8A0F8127659EC400AB7070 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		3B8A0F832765A80F00AB7070 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		3BC87AEC2763026500FEB977 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3BCEE1332761C6A3007095D7 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		3BCEE1352761C6B3007095D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -98,6 +102,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		3B8A0F8027659EA200AB7070 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3B8A0F8127659EC400AB7070 /* FollowerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3BC87AEB2763023E00FEB977 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,11 +149,13 @@
 		3BCEE1312761C688007095D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B8A0F8027659EA200AB7070 /* Cells */,
 				3B0198B2275F080F00C985BF /* GFAlertVC.swift */,
 				3B0198B0275F045000C985BF /* GFBodyLabel.swift */,
 				3B64238F2759EBAC0078F017 /* GFButton.swift */,
 				3B6423912759F8230078F017 /* GFTextField.swift */,
 				3B0198AE275DAA2A00C985BF /* GFTitleLabel.swift */,
+				3B8A0F832765A80F00AB7070 /* GFAvatarImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,8 +245,10 @@
 				3B64238E275883820078F017 /* FavoritesListVC.swift in Sources */,
 				3B6423902759EBAC0078F017 /* GFButton.swift in Sources */,
 				3B0198B5275F22AB00C985BF /* UIViewController+Ext.swift in Sources */,
+				3B8A0F842765A80F00AB7070 /* GFAvatarImageView.swift in Sources */,
 				3B64238C275882F90078F017 /* SearchVC.swift in Sources */,
 				3B0198B3275F080F00C985BF /* GFAlertVC.swift in Sources */,
+				3B8A0F8227659EC400AB7070 /* FollowerCell.swift in Sources */,
 				3B8A0F7F276461A200AB7070 /* ErrorMessage.swift in Sources */,
 				3B0198B1275F045000C985BF /* GFBodyLabel.swift in Sources */,
 				3BCEE1342761C6A3007095D7 /* Follower.swift in Sources */,
