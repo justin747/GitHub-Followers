@@ -9,8 +9,15 @@ import UIKit
 
 class FollowerListVC: UIViewController {
     
+//    Enums are hashable by default
+    
+    enum Section {
+        case main
+    }
+    
     var username: String!
     var collectionView: UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,5 +74,11 @@ class FollowerListVC: UIViewController {
                 
             }
         }
+    }
+    
+    func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell in
+            <#code#>
+        })
     }
 }
