@@ -16,7 +16,7 @@ class FollowerListVC: UIViewController {
     }
     
     var username: String!
-    var followers: [Follower]
+    var followers: [Follower] = []
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -94,7 +94,7 @@ class FollowerListVC: UIViewController {
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
         DispatchQueue.main.async {
-            dataSource.apply(snapshot, animatingDifferences: true)
+            self.dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
 }
