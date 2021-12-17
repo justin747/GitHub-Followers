@@ -9,13 +9,15 @@ import UIKit
 
 class FollowerListVC: UIViewController {
     
-//    Enums are hashable by default
+    //    Enums are hashable by default
     
     enum Section {
         case main
     }
     
     var username: String!
+    var followers: [Follower]
+    
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
@@ -24,6 +26,7 @@ class FollowerListVC: UIViewController {
         configureCollectionView()
         configureViewController()
         getFollowers()
+        configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +70,8 @@ class FollowerListVC: UIViewController {
             switch result {
                 
             case .success(let followers):
-                print(followers)
+                self.followers = followers
+                self.updateData()
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "OK")
@@ -80,6 +84,17 @@ class FollowerListVC: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
             cell.set(follower: follower)
+            
+            return cell
         })
+    }
+    
+    func updateData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(followers)
+        DispatchQueue.main.async {
+            dataSource.apply(snapshot, animatingDifferences: true)
+        }
     }
 }
