@@ -1,17 +1,16 @@
 //
-//  NetworkManager.swift
-//  GHFollowers
+//  FollowerListVC.swift
+//  GitHub Followers
 //
-//  Created by Sean Allen on 1/2/20.
-//  Copyright © 2020 Sean Allen. All rights reserved.
+//  Created by Justin747 on 12/4/21.
 //
 
 import UIKit
 
 class NetworkManager {
-    static let shared   = NetworkManager()
+    static let shared = NetworkManager()
     private let baseURL = "https://api.github.com/users/"
-    let cache           = NSCache<NSString, UIImage>()
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
