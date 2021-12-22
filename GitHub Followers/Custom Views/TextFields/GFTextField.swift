@@ -22,7 +22,7 @@ class GFTextField: UITextField {
         translatesAutoresizingMaskIntoConstraints = false
         
         layer.cornerRadius = 10
-        layer.borderWidth = 2
+        layer.borderWidth = 1
         layer.borderColor = UIColor.systemGray4.cgColor
         
         textColor = .label
