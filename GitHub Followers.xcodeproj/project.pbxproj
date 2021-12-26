@@ -31,6 +31,8 @@
 		3B894C8627782C1A00E84EEE /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B894C8527782C1A00E84EEE /* GFItemInfoVC.swift */; };
 		3B894C882778320B00E84EEE /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B894C872778320B00E84EEE /* GFRepoItemVC.swift */; };
 		3B894C8A27783C6800E84EEE /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B894C8927783C6800E84EEE /* GFFollowerItemVC.swift */; };
+		3B894C8D2778478300E84EEE /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B894C8C2778478200E84EEE /* Date+Ext.swift */; };
+		3B894C8F277847C700E84EEE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B894C8E277847C700E84EEE /* String+Ext.swift */; };
 		3B8A0F8227659EC400AB7070 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A0F8127659EC400AB7070 /* FollowerCell.swift */; };
 		3B8A0F842765A80F00AB7070 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A0F832765A80F00AB7070 /* GFAvatarImageView.swift */; };
 		3BC87AED2763026500FEB977 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC87AEC2763026500FEB977 /* NetworkManager.swift */; };
@@ -65,6 +67,8 @@
 		3B894C8527782C1A00E84EEE /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
 		3B894C872778320B00E84EEE /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		3B894C8927783C6800E84EEE /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
+		3B894C8C2778478200E84EEE /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		3B894C8E277847C700E84EEE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		3B8A0F8127659EC400AB7070 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		3B8A0F832765A80F00AB7070 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		3BC87AEC2763026500FEB977 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				3B0198B4275F22AB00C985BF /* UIViewController+Ext.swift */,
+				3B894C8C2778478200E84EEE /* Date+Ext.swift */,
+				3B894C8E277847C700E84EEE /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				3BCEE1362761C6B3007095D7 /* User.swift in Sources */,
 				3B6423922759F8230078F017 /* GFTextField.swift in Sources */,
 				3B64238E275883820078F017 /* FavoritesListVC.swift in Sources */,
+				3B894C8F277847C700E84EEE /* String+Ext.swift in Sources */,
 				3B6423902759EBAC0078F017 /* GFButton.swift in Sources */,
 				3B0198B5275F22AB00C985BF /* UIViewController+Ext.swift in Sources */,
 				3B7C9232276D9C340096CD0F /* UIHelper.swift in Sources */,
@@ -345,6 +352,7 @@
 				3B894C5C2775A11000E84EEE /* GFError.swift in Sources */,
 				3B894C802776C1C700E84EEE /* GFSecondaryTItleLabel.swift in Sources */,
 				3BCEE1342761C6A3007095D7 /* Follower.swift in Sources */,
+				3B894C8D2778478300E84EEE /* Date+Ext.swift in Sources */,
 				3B0198AF275DAA2A00C985BF /* GFTitleLabel.swift in Sources */,
 				3B894C582772AA2700E84EEE /* GFEmptyStateView.swift in Sources */,
 				3BC87AED2763026500FEB977 /* NetworkManager.swift in Sources */,
@@ -501,7 +509,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +538,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

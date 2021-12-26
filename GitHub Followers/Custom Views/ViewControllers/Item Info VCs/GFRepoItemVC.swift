@@ -18,6 +18,6 @@ class GFRepoItemVC: GFItemInfoVC {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)
         
-        actionButton.set(backgroundColor: .systemMint, title: "Github Profile")
+        actionButton.set(backgroundColor: .systemGreen, title: "Github Profile")
     }
 }
