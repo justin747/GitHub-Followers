@@ -31,12 +31,10 @@ class GFButton: UIButton {
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func set(backgroundColor: UIColor, title: String) {
+        self.backgroundColor = backgroundColor
+        setTitle(title, for: .normal)
+    }
 }
 
-/*
- // Only override draw() if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- override func draw(_ rect: CGRect) {
- // Drawing code
- }
- */
