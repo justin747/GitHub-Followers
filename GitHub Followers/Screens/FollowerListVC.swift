@@ -44,6 +44,9 @@ class FollowerListVC: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     
@@ -62,7 +65,7 @@ class FollowerListVC: UIViewController {
         searchController.searchBar.placeholder = "Search for a User"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-
+        
     }
     
     
@@ -107,8 +110,11 @@ class FollowerListVC: UIViewController {
         snapshot.appendItems(followers)
         DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
     }
+    
+    @objc func addButtonTapped() {
+        print("Move to Brooklyn")
+    }
 }
-
 
 extension FollowerListVC: UICollectionViewDelegate {
     
@@ -159,6 +165,6 @@ extension FollowerListVC: FollowerListVCDelegate {
         filteredFollowers.removeAll()
         updateData(on: followers)
         getFollowers(username: username, page: page)
-    
+        
     }
 }
