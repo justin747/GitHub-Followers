@@ -112,9 +112,9 @@
 		3B642376275746820078F017 /* GitHub Followers */ = {
 			isa = PBXGroup;
 			children = (
+				3B642385275746860078F017 /* Info.plist */,
 				3B8A0F7D2764619400AB7070 /* Utilities */,
 				3BC87AEB2763023E00FEB977 /* Managers */,
-				3B642385275746860078F017 /* Info.plist */,
 				3BCEE1322761C68F007095D7 /* Screens */,
 				3BCEE1312761C688007095D7 /* Custom Views */,
 				3BCEE1302761C67F007095D7 /* Extensions */,
