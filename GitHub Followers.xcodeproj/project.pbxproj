@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				3B642385275746860078F017 /* Info.plist */,
-				3B8A0F7D2764619400AB7070 /* Utilities */,
 				3BC87AEB2763023E00FEB977 /* Managers */,
 				3BCEE1322761C68F007095D7 /* Screens */,
 				3BCEE1312761C688007095D7 /* Custom Views */,
@@ -184,6 +183,7 @@
 		3B894C8B27783CD600E84EEE /* Item Info VCs */ = {
 			isa = PBXGroup;
 			children = (
+				3B8A0F7D2764619400AB7070 /* Utilities */,
 				3B894C8927783C6800E84EEE /* GFFollowerItemVC.swift */,
 				3B894C872778320B00E84EEE /* GFRepoItemVC.swift */,
 				3B894C8527782C1A00E84EEE /* GFItemInfoVC.swift */,
