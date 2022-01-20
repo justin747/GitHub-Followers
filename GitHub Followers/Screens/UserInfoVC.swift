@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate: class {
+    func didRequestFollowers(for username: String)
+}
+
 class UserInfoVC: GFDataLoadingVC  {
     
     let headerView = UIView()
@@ -16,7 +20,7 @@ class UserInfoVC: GFDataLoadingVC  {
     var itemViews: [UIView] = []
     
     var username: String!
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     
     override func viewDidLoad() {
@@ -121,22 +125,24 @@ class UserInfoVC: GFDataLoadingVC  {
     }
 }
 
-extension UserInfoVC: ItemInfoVCDelegate {
+extension UserInfoVC: GFRepoItemVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The URL attached to this User is invalid.", buttonTitle: "Ok")
             return
         }
-      presentsafariVC(with: url)
-      
+        presentsafariVC(with: url)
     }
-    
+}
+
+extension UserInfoVC: GFFollowerItemVCDelegate {
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {
             presentGFAlertOnMainThread(title: "No Followers", message: "This user has no Followers. What a shame 😞", buttonTitle: "So Sad")
             return
         }
         delegate.didRequestFollowers(for: user.login)
-            dismssVC()
+        dismssVC()
     }
 }
+
