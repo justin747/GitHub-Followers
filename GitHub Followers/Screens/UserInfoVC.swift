@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol UserInfoVCDelegate: class {
-    func didTapGitHubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
-}
-
 class UserInfoVC: GFDataLoadingVC  {
     
     let headerView = UIView()
@@ -106,7 +101,7 @@ class UserInfoVC: GFDataLoadingVC  {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+            dateLabel.heightAnchor.constraint(equalToConstant: 50)
             
         ])
     }
@@ -126,7 +121,7 @@ class UserInfoVC: GFDataLoadingVC  {
     }
 }
 
-extension UserInfoVC: UserInfoVCDelegate {
+extension UserInfoVC: ItemInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The URL attached to this User is invalid.", buttonTitle: "Ok")
