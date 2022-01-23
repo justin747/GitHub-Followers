@@ -2,7 +2,7 @@
 //  FollowerListVC.swift
 //  GitHub Followers
 //
-//  Created by Justin747 on 12/4/21.
+//  Created on 12/4/21.
 //
 
 import UIKit
