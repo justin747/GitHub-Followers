@@ -12,12 +12,12 @@ class FollowerListVC: GFDataLoadingVC {
     enum Section { case main }
     
     var username: String!
-    var followers: [Follower] = []
+    var followers: [Follower]        = []
     var filteredFollowers: [Follower] = []
-    var page = 1
-    var hasMoreFollowers = true
-    var isSearching = false
-    var isLoadingFollowers = false
+    var page                        = 1
+    var hasMoreFollowers             = true
+    var isSearching                 = false
+    var isLoadingFollowers           = false
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -84,15 +84,7 @@ class FollowerListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let followers):
-                if followers.count < 100 { self.hasMoreFollowers = false }
-                self.followers.append(contentsOf: followers)
-                if self.followers.isEmpty {
-                    let message = "This user doesn't have any followers. Go follow them 😀"
-                    DispatchQueue.main.async {
-                        self.showEmptyStateView(with: message, in: self.view)
-                    }
-                }
-                self.updateData(on: self.followers)
+                self.updateUI(with: followers)
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
@@ -100,6 +92,18 @@ class FollowerListVC: GFDataLoadingVC {
             
             self.isLoadingFollowers = false
         }
+    }
+    
+    func updateUI(with follower: [Follower]) {
+            if followers.count < 100 { self.hasMoreFollowers = false }
+            self.followers.append(contentsOf: followers)
+            if self.followers.isEmpty {
+                let message = "This user doesn't have any followers. Go follow them 😀"
+                DispatchQueue.main.async {
+                    self.showEmptyStateView(with: message, in: self.view)
+                }
+            }
+            self.updateData(on: self.followers)
     }
     
     
