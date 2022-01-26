@@ -36,26 +36,39 @@ class UserInfoVC: GFDataLoadingVC  {
     func configureViewController() {
         
         view.backgroundColor = .systemBackground
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismssVC))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
         
     }
     
     func getUserInfo() {
-        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
-            guard let self = self else { return }
-            
-            switch result {
-            case .success(let user):
-                DispatchQueue.main.async {
-                    self.configureUIElements(with: user)
+        Task {
+            do {
+                let user = try await NetworkManager.shared.getUserInfo(for: username)
+                configureUIElements(with: user)
+            } catch {
+                if let gfError = error as? GFError {
+                    presentGFAlert(title: "Something went wrong", message: gfError.rawValue, buttonTitle: "OK")
+                } else {
+                    presentDefaultError()
                 }
-                
-            case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
-    }
+        
+//            NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
+//                guard let self = self else { return }
+//
+//                switch result {
+//                case .success(let user):
+//                    DispatchQueue.main.async {
+//                        self.configureUIElements(with: user)
+//                    }
+//
+//                case .failure(let error):
+//                    self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+//                }
+//            }
+        }
     
     func configureUIElements(with user: User) {
         
@@ -114,7 +127,7 @@ class UserInfoVC: GFDataLoadingVC  {
     
     
     
-    @objc func dismssVC() {
+    @objc func dismissVC() {
         dismiss(animated: true)
     }
 }
@@ -122,7 +135,7 @@ class UserInfoVC: GFDataLoadingVC  {
 extension UserInfoVC: GFRepoItemVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
-            presentGFAlertOnMainThread(title: "Invalid URL", message: "The URL attached to this User is invalid.", buttonTitle: "Ok")
+            presentGFAlert(title: "Invalid URL", message: "The URL attached to this User is invalid.", buttonTitle: "Ok")
             return
         }
         presentsafariVC(with: url)
@@ -132,11 +145,11 @@ extension UserInfoVC: GFRepoItemVCDelegate {
 extension UserInfoVC: GFFollowerItemVCDelegate {
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {
-            presentGFAlertOnMainThread(title: "No Followers", message: "This user has no Followers. What a shame 😞", buttonTitle: "So Sad")
+            presentGFAlert(title: "No Followers", message: "This user has no Followers. What a shame 😞", buttonTitle: "So Sad")
             return
         }
         delegate.didRequestFollowers(for: user.login)
-        dismssVC()
+        dismissVC()
     }
 }
 
