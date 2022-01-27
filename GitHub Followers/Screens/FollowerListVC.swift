@@ -84,6 +84,7 @@ class FollowerListVC: GFDataLoadingVC {
                 let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
                 updateUI(with: followers)
                 dismissLoadingView()
+                isLoadingFollowers = false
             } catch {
                 if let gfError = error as? GFError {
                     presentGFAlert(title: "Bad Stuff Happened", message: gfError.rawValue, buttonTitle: "Ok")
