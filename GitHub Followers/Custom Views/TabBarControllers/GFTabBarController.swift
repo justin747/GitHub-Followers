@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFTabBarContoller: UITabBarController {
+class GFTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
