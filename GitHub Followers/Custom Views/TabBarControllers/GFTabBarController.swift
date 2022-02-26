@@ -1,5 +1,5 @@
 //
-//  GFTabBarContoller.swift
+//  GFTabBarController.swift
 //  GitHub Followers
 //
 //  Created by Justin747 on 12/30/21.
